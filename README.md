@@ -5,6 +5,9 @@ Implicit assertions are like built-in assertions and we do not have to actually 
 
 Explicit assertions, They are not built-in commands. we have to use the assert () or expect () function to specify the assertion
 
+## Pre conditions before using assertions
+You must have gotten the element you want to apply assertion on via cy.get() or cy.contains(), then you can now proceed to apply your assertion
+
 ## should-contain assertion
 Allows us to test if a page contains a particular element or text
 
@@ -24,3 +27,13 @@ e.g  cy.get('.btn').should('have.class','btn') Note for the assertion method, we
 We can use have.class to see if an element has a certain class Name, have.id, have.text, have.html etc.
 
 ## Should-be assertion
+This can be used to check the state of an element. It can be used to check if an element e.g a button is enabled, empty etc
+
+cy.get('.btn').should('be.enabled'). There are many other should.be attributes that you can use. such as, be.focussed, be.selected, be.disabled etc.
+
+## should-equal assertion
+This is used to check if an attribute is equal to some particular value. We need to use the invoke () as shown below
+
+cy.get('.btn') // extracting the element we wanna run assertion on
+    .invoke ('attr', 'class') //stating that we wanna check the class of such element 
+    .should('equal', 'btn')

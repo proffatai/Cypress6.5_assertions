@@ -13,4 +13,14 @@
    cy.get('.query-button > .btn').should('have.class','btn') // getting the button from its parent className to its own className
 
    cy.get('#query-btn').should('have.id', 'query-btn')
+
+   cy.get('.btn').should('be.enabled')
+
+   cy.get('#query-btn') // extracting the element we wanna run assertion on
+   .invoke ('attr', 'id') //stating that we wanna check the class of such element 
+   .should('equal', 'query-btn') // performing the assertion
+
+   cy.get('[name=submission]') // extracting the element we wanna run assertion on
+    .invoke ('attr', 'id') //stating that we wanna check the class of such element 
+    .should('equal', 'main')
  })
