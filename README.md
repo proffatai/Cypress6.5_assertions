@@ -40,3 +40,14 @@ cy.get('.btn') // extracting the element we wanna run assertion on
 
 ## Chaining multiple assertions together via the and command
 visit assertion2.optimized.js for example
+
+## External Assertions
+
+### expect()........
+var name='mic'
+e.g expect (name).to.be.equal('ade')
+other popular combinations are: to.not.equal() , to.be.true, to.be.a('string'), to.be.null, to.not.be.null, to.exist etc.
+
+### asert()........
+asset.equal(actual, expected, "message to display on failure")
+visit the cypress website for more info
