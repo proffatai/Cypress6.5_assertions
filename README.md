@@ -37,3 +37,6 @@ This is used to check if an attribute is equal to some particular value. We need
 cy.get('.btn') // extracting the element we wanna run assertion on
     .invoke ('attr', 'class') //stating that we wanna check the class of such element 
     .should('equal', 'btn')
+
+## Chaining multiple assertions together via the and command
+visit assertion2.optimized.js for example
